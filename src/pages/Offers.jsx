@@ -6,3 +6,5 @@ function Offers () {
         </div>
     )
 }
+
+export default Offers
