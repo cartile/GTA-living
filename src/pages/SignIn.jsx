@@ -13,9 +13,13 @@ function SignIn () {
     const navigate = useNavigate()
 
     return (
-        <div>
-            <h1>SignIn</h1>
-        </div>
+        <>
+            <div className="pageContainer">
+                <header>
+                    <p className="pageHeader">Welcome Back!</p>
+                </header>
+            </div>
+        </>
     )
 }
 
