@@ -10,7 +10,7 @@ function SignIn () {
         email: '',
         password: '',
     })
-    const { email, password } = FormData
+    const { email, password } = formData
 
     const navigate = useNavigate()
 
