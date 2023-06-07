@@ -22,7 +22,7 @@ function Offers() {
                 //create query
                 const q = query(
                     listingsRef, 
-                    where('offer', '==', True), 
+                    where('offer', '==', true), 
                     orderBy('timestamp', 'desc'),
                     limit(10)
                     )
@@ -67,7 +67,7 @@ function Offers() {
             </ul>
         </main>
         </> 
-        : <p>No listings for {params.categoryName} </p>}
+        : <p>There are no current offers</p>}
     </div>
     )
 }
