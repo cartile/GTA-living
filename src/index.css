@@ -138,6 +138,10 @@ button {
   font-size: 2rem;
   font-weight: 800;
 }
+.pageHeader2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
 
 .navbar {
   position: fixed;
@@ -218,9 +222,17 @@ button {
   text-align: right;
 }
 
-.signInBar,
+.signInBar {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: inherit;
+}
+
 .signUpBar {
-  margin-top: 3rem;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -264,7 +276,7 @@ button {
 }
 
 .socialLogin {
-  margin-top: 4rem;
+  margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -289,7 +301,7 @@ button {
 }
 
 .registerLink {
-  margin-top: 4rem;
+  margin-top: 1rem;
   color: #00cc66;
   font-weight: 600;
   text-align: center;
