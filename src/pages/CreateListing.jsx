@@ -14,6 +14,7 @@ import { v4 as uuidv4 } from 'uuid'
 import Spinner from '../components/Spinner'
 
 function CreateListing() {
+    const apiKey = process.env.REACT_APP_GEOCODE_API_KEY;
     const [geolocationEnabled, setGeolocationEnabled] = useState(true)
     const [loading, setLoading] = useState(false)
     const [formData, setFormData] = useState({
@@ -91,7 +92,7 @@ function CreateListing() {
         // google geolocation api
         if (geolocationEnabled) {
             const response = await fetch(
-            `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${process.env.REACT_APP_GEOCODE_API_KEY}`
+            `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${apiKey}`
             )
 
             const data = await response.json()
