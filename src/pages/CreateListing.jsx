@@ -15,7 +15,7 @@ import Spinner from '../components/Spinner'
 
 function CreateListing() {
   // eslint-disable-next-line
-  const [geolocationEnabled, setGeolocationEnabled] = useState(false)
+  const [geolocationEnabled, setGeolocationEnabled] = useState(true)
   const [loading, setLoading] = useState(false)
   const [formData, setFormData] = useState({
     type: 'rent',
@@ -212,9 +212,10 @@ function CreateListing() {
 
     // Text/Booleans/Numbers
     if (!e.target.files) {
+        const value = e.target.id === 'name' || e.target.id === 'address' ? e.target.value : parseFloat(e.target.value)
       setFormData((prevState) => ({
         ...prevState,
-        [e.target.id]: boolean ?? e.target.value,
+        [e.target.id]: boolean ?? value,
       }))
     }
   }
