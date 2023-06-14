@@ -597,6 +597,7 @@ button {
 
 .contactLandlord {
   margin-top: 2rem;
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
 }
@@ -614,7 +615,7 @@ button {
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 }
 
 .messageLabel {
