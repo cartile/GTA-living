@@ -212,10 +212,9 @@ function CreateListing() {
 
     // Text/Booleans/Numbers
     if (!e.target.files) {
-        const value = e.target.id === 'name' || e.target.id === 'address' ? e.target.value : parseFloat(e.target.value)
       setFormData((prevState) => ({
         ...prevState,
-        [e.target.id]: boolean ?? value,
+        [e.target.id]: boolean ?? e.target.value,
       }))
     }
   }
