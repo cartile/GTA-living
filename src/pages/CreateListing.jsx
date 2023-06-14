@@ -159,7 +159,7 @@ function CreateListing() {
           );
         });
       };
-      
+
     console.log("Before Promise.all: ", images);
 
     const imgUrls = await Promise.all(
@@ -171,7 +171,6 @@ function CreateListing() {
     })
     console.log("After Promise.all: ", imgUrls);
 
-    console.log(imgUrls)
 
     const formDataCopy = {
       ...formData,

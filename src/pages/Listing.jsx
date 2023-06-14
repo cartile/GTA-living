@@ -77,8 +77,37 @@ function Listing() {
             </p>
             {listing.offer && (
                 <p className="discountPrice">
-                    ${listing.regularPrice - listing.discountedPrice} discount!
+                    ${(listing.regularPrice - listing.discountedPrice)
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+                    } discount!
                 </p>
+            )}
+            <ul className="listingDetailsList">
+                <li>
+                    {listing.bedrooms > 1 
+                    ? `${listing.bedrooms} Bedrooms`
+                    : '1 Bedroom' }
+                </li>
+                <li>
+                    {listing.bathrooms > 1 
+                    ? `${listing.bathrooms} Bathrooms`
+                    : '1 Bathroom' }
+                </li>
+                <li>{listing.parking && 'Parking Available'}</li>
+                <li>{listing.furnished && 'Furnished'}</li>
+            </ul>
+
+            <p className="listingLocationTitle">Location:</p>
+
+
+            {/* Map */}
+            {auth.currentUser?.uid !== listing.userRef && (
+                <Link 
+                to={`/contact/${listing.userRef}?listingName=${listing.name}`} 
+                className='primaryButton'>
+                    Contact Landlord
+                </Link>
             )}
         </div>
    </main>
