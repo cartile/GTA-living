@@ -21,29 +21,66 @@ function Listing() {
             const docSnap = await getDoc(docRef)
 
             if(docSnap.exists()) {
-                console.log(docSnap.data())
                 setListing(docSnap.data())
                 setLoading(false)
             }
         }
         fetchListing()
     }, [navigate, params.listingId])
-
+    
+    if(loading) {
+        return <Spinner />
+    }
 
     return (
    <main>
     {/*slideshow */}
-    <div className="shareIconDiv" onClick={() => {
-        navigator.clipboard.writeText(window.location.href)
-        setShareLinkCopied(true)
-        setTimeout(()=>{ //prevents spamming
-            setShareLinkCopied(false)
-        }, 2000)
-    }}>
+        <div className="shareIconDiv" onClick={() => {
+            navigator.clipboard.writeText(window.location.href)
+            setShareLinkCopied(true)
+            setTimeout(()=>{ //prevents spamming
+                setShareLinkCopied(false)
+            }, 2000)
+        }}>
 
-        <img src={shareIcon} alt=""/>
-    </div>
-        {shareLinkCopied && <p className='linkCopied'>Link Copied!</p>}
+            <img src={shareIcon} alt=""/>
+        </div>
+            {shareLinkCopied && <p className='linkCopied'>Listing Link Copied!</p>}
+
+        <div className='listingDetails'>
+            <p className='listingName'>
+                {listing.name} - $
+                {listing.offer ? (
+                    <>
+                    <del>
+                        {listing.regularPrice
+                        .toString()
+                        .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+                    </del>
+                    {' '}
+                    ${listing.discountedPrice
+                        .toString()
+                        .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+                    </>
+                ) : (
+                    listing.regularPrice
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+                )}
+            </p>
+
+            <p className='listingLocation'>
+                {listing.location}
+            </p>
+            <p className='listingType'>
+                For {listing.type === 'rent' ? 'Rent' : 'Sale'}
+            </p>
+            {listing.offer && (
+                <p className="discountPrice">
+                    ${listing.regularPrice - listing.discountedPrice} discount!
+                </p>
+            )}
+        </div>
    </main>
     )
 }
