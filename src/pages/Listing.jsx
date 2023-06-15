@@ -6,12 +6,17 @@ import Spinner from '../components/Spinner'
 import {db} from '../firebase.config'
 import shareIcon from '../assets/svg/shareIcon.svg'
 import {MapContainer, Marker, Popup, TileLayer} from 'react-leaflet'
+import SwiperCore, {Navigation, Pagination, Scrollbar, A11y} from 'swiper'
+import {Swiper, SwiperSlide} from 'swiper/react'
+import 'swiper/swiper-bundle.css'
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y])
 
 function Listing() {
     const [listing, setListing] = useState(null)
     const [loading, setLoading] = useState(true)
     const [shareLinkCopied, setShareLinkCopied] = useState(false)
-
+    const [autoscrollEnabled, setAutoscrollEnabled] = useState(true);
+    
     const navigate = useNavigate()
     const params = useParams()
     const auth = getAuth()
@@ -32,10 +37,23 @@ function Listing() {
     if(loading) {
         return <Spinner />
     }
-
+    console.log(listing.imgUrls)
     return (
    <main>
-    {/*slideshow */}
+      <Swiper style={{ width: '400px', height: '300px' }} slidesPerView={1} pagination={{ clickable: true }}>
+            {listing.imgUrls.map((url, index) => (
+            <SwiperSlide key={index}>
+                <div
+                style={{
+                    background: `url(${listing.imgUrls[index]}) center no-repeat`,
+                    backgroundSize: 'cover',
+                }}
+                className='swiperSlideDiv'
+                />
+            </SwiperSlide>
+        ))}
+      </Swiper>
+
         <div className="shareIconDiv" onClick={() => {
             navigator.clipboard.writeText(window.location.href)
             setShareLinkCopied(true)
