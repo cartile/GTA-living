@@ -6,7 +6,7 @@ import Spinner from '../components/Spinner'
 import {db} from '../firebase.config'
 import shareIcon from '../assets/svg/shareIcon.svg'
 import {MapContainer, Marker, Popup, TileLayer} from 'react-leaflet'
-import SwiperCore, {Autoplay, Navigation, Pagination, Scrollbar, A11y} from 'swiper'
+import SwiperCore, {Autoplay, Pagination, Scrollbar, A11y, FreeMode, Navigation, Thumbs} from 'swiper'
 import {Swiper, SwiperSlide} from 'swiper/react'
 import 'swiper/swiper-bundle.css'
 SwiperCore.use([Autoplay, Navigation, Pagination, Scrollbar, A11y])
@@ -16,6 +16,7 @@ function Listing() {
     const [loading, setLoading] = useState(true)
     const [shareLinkCopied, setShareLinkCopied] = useState(false)
     const [autoscrollEnabled, setAutoscrollEnabled] = useState(true);
+    const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
     const navigate = useNavigate()
     const params = useParams()
@@ -41,26 +42,38 @@ function Listing() {
     const toggleAutoscroll = () => {
         setAutoscrollEnabled(!autoscrollEnabled);
       };
+
     return (
    <main>
       <Swiper 
         // autoplay={autoscrollEnabled ? {delay: 3000, disableOnInteraction: false} : false}
-        style={{ width: '400px', height: '300px' }} 
+        style={{ width: '100%', height: '500px', 
+        "--swiper-navigation-color": "#fff",
+        "--swiper-pagination-color": "#fff",}} 
         slidesPerView={1} 
         pagination={{ clickable: true,
-                     }}>
+                     }}
+        thumbs={{ swiper: thumbsSwiper }}
+        modules={[FreeMode, Navigation, Thumbs]}
+        spaceBetween={10}
+        navigation={true}
+        className='mySwiper2'
+                     >
             {listing.imgUrls.map((url, index) => (
             <SwiperSlide key={index}>
                 <div
                 style={{
                     background: `url(${listing.imgUrls[index]}) center no-repeat`,
-                    backgroundSize: 'cover',
+                    backgroundSize: 'contain',
                 }}
                 className='swiperSlideDiv'
                 />
             </SwiperSlide>
         ))}
       </Swiper>
+     
+    
+      
       {/* <button onClick={toggleAutoscroll}>
         {autoscrollEnabled ? 'Disable Autoscroll' : 'Enable Autoscroll'}
       </button> */}
