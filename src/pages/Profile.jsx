@@ -72,8 +72,8 @@ function Profile () {
         }))
     }
 
-    const onDelete = async (listingId) => {
-        if(window.confirm('Are you sure you want to delete this listing?')) {
+    const onDelete = async (listingId, listingName) => {
+        if(window.confirm(`Are you sure you want to delete the listing "${listingName}"?`)) {
             await deleteDoc(doc(db, 'listings', listingId))
         }
     }
@@ -133,7 +133,7 @@ function Profile () {
                             key={listing.id}
                             listing={listing.data}
                             id={listing.id} 
-                            onDelete={()=> onDelete(listing.id)}
+                            onDelete={()=> onDelete(listing.id, listing.data.name)}
                             />
                             
                         ))}
