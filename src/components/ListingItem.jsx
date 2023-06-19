@@ -51,6 +51,7 @@ function ListingItem({listing, id, onEdit, onDelete}) {
                 </div>
             </div>
         </Link>
+        
         {onDelete && (
           <DeleteIcon 
             className='removeIcon' 
