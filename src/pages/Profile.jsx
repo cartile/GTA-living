@@ -18,6 +18,7 @@ function Profile () {
     const [loading, setLoading]= useState(true)
     const [listings, setListings] = useState(null)
     const {name, email} = formData
+    const [listingsUpdated, setListingsUpdated] = useState(false)
     const navigate = useNavigate()
     useEffect(() => {
         const fetchUserListings = async () => {
@@ -40,7 +41,7 @@ function Profile () {
             setLoading(false)
         }
         fetchUserListings()
-    }, [auth.currentUser.uid])
+    }, [auth.currentUser.uid, listingsUpdated])
 
     const onLogout = () => {
         auth.signOut()
@@ -75,6 +76,8 @@ function Profile () {
     const onDelete = async (listingId, listingName) => {
         if(window.confirm(`Are you sure you want to delete the listing "${listingName}"?`)) {
             await deleteDoc(doc(db, 'listings', listingId))
+            setListingsUpdated(!listingsUpdated)
+            toast.success(`Listing "${listingName}" has been deleted.`)
         }
     }
     return <div className='profile'>
