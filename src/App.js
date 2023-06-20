@@ -13,7 +13,7 @@ import {ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import Navbar from "./components/Navbar"
 import PrivateRoute from "./components/PrivateRoute"
-
+import EditListing from './pages/EditListing'
 
 function App() {
   return (
@@ -32,6 +32,7 @@ function App() {
         <Route path='/create-listing' element={<CreateListing />} />
         <Route path='/category/:categoryName/:listingId' element={<Listing />} />
         <Route path='/contact/:landlordId' element={<Contact />} />
+        <Route path='/edit-listing/:listingId' element={<EditListing />} />
       </Routes>
       <Navbar />
     </Router>
