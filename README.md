@@ -10,6 +10,36 @@ Welcome to GTALiving, a modern and user-friendly housing marketplace web applica
 - **Contact Landlords**: Connect directly with landlords for properties you're interested in buying or renting.
 - **Create, Edit, and Manage Listings**: Easily create new listings, make updates, and delete listings as needed. Showcase your properties in the best light to attract potential tenants or buyers.
 
+# Demo
+## Explore Page:
+<img width="497" alt="image" src="https://github.com/cartile/GTA-living/assets/113253660/8a1d8828-e2e8-465f-96f9-3a2b155b8109">
+
+## Login / Registration:
+<img width="498" alt="image" src="https://github.com/cartile/GTA-living/assets/113253660/66e4814e-2430-4f2e-a304-d3e099d66938">
+
+## Offers Page:
+<img width="497" alt="image" src="https://github.com/cartile/GTA-living/assets/113253660/7e961c08-a5e3-40a7-8911-8f44f0fa8c87">
+
+## Example Listing:
+<img width="496" alt="image" src="https://github.com/cartile/GTA-living/assets/113253660/ac2a3296-bc5e-44f2-810e-464e26efed07">
+
+## Example Listing Information (at the bottom):
+<img width="497" alt="image" src="https://github.com/cartile/GTA-living/assets/113253660/c9eb5399-74c2-4d89-bd02-4cb78ee10cfb">
+
+## Profile Page (Allows Listing Creation and Management):
+<img width="498" alt="image" src="https://github.com/cartile/GTA-living/assets/113253660/b1a4957c-ee2d-41cc-8d46-cbdef8e7507d">
+
+## Listing Creation Form:
+<img width="497" alt="image" src="https://github.com/cartile/GTA-living/assets/113253660/32a8f8ca-90b0-48c4-a056-dc95d94aff54">
+<img width="500" alt="image" src="https://github.com/cartile/GTA-living/assets/113253660/fee9b596-3d5b-475b-a249-fbeb345687d7">
+
+
+
+
+
+
+
+
 ## Technologies Used
 - JavaScript
 - React
