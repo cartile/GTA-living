@@ -15,8 +15,6 @@ function Listing() {
     const [listing, setListing] = useState(null)
     const [loading, setLoading] = useState(true)
     const [shareLinkCopied, setShareLinkCopied] = useState(false)
-    const [autoscrollEnabled, setAutoscrollEnabled] = useState(true);
-    const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
     const navigate = useNavigate()
     const params = useParams()
@@ -39,24 +37,20 @@ function Listing() {
         return <Spinner />
     }
 
-    const toggleAutoscroll = () => {
-        setAutoscrollEnabled(!autoscrollEnabled);
-      };
+
 
     return (
    <main>
       <Swiper 
-        // autoplay={autoscrollEnabled ? {delay: 3000, disableOnInteraction: false} : false}
         style={{ width: '100%', height: '500px', 
         "--swiper-navigation-color": "#fff",
         "--swiper-pagination-color": "#fff",}} 
         slidesPerView={1} 
         pagination={{ clickable: true,
                      }}
-        thumbs={{ swiper: thumbsSwiper }}
         modules={[FreeMode, Navigation, Thumbs]}
         spaceBetween={10}
-        navigation={true}
+        navigation={false}
         className='mySwiper2'
                      >
             {listing.imgUrls.map((url, index) => (
