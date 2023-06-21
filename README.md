@@ -11,7 +11,7 @@ Welcome to GTALiving, a modern and user-friendly housing marketplace web applica
 - **Create, Edit, and Manage Listings**: Easily create new listings, make updates, and delete listings as needed. Showcase your properties in the best light to attract potential tenants or buyers.
 
 # Demo
-## Explore Page:
+## Explore Page with Autoscrolling Recommended:
 <img width="497" alt="image" src="https://github.com/cartile/GTA-living/assets/113253660/8a1d8828-e2e8-465f-96f9-3a2b155b8109">
 
 ## Filter Listings by Renting/Selling
