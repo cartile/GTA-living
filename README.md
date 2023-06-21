@@ -1,7 +1,7 @@
 # GTALiving
 
 Welcome to GTALiving, a modern and user-friendly housing marketplace web application! 
-## We are currently deployed on Vercel: https://gta-living.vercel.app/sign-up/
+## Website is deployed on Vercel: https://gta-living.vercel.app/sign-up/
 
 ## Features:
 - **Get Started**: Sign In and Sign Up powered safely and securely by Firebase Authentication and Google OAuth.
