@@ -24,7 +24,6 @@ Welcome to GTALiving, a modern and user-friendly housing marketplace web applica
 
 ## Offers Page:
 <img width="497" alt="image" src="https://github.com/cartile/GTA-living/assets/113253660/7e961c08-a5e3-40a7-8911-8f44f0fa8c87">
-<img width="498" alt="image" src="https://github.com/cartile/GTA-living/assets/113253660/0d836b66-468c-4126-b350-d99657b489f5">
 
 ## Example Listing:
 <img width="496" alt="image" src="https://github.com/cartile/GTA-living/assets/113253660/ac2a3296-bc5e-44f2-810e-464e26efed07">
@@ -32,6 +31,7 @@ Welcome to GTALiving, a modern and user-friendly housing marketplace web applica
 
 ## Profile Page (Allows Listing Creation and Management):
 <img width="498" alt="image" src="https://github.com/cartile/GTA-living/assets/113253660/b1a4957c-ee2d-41cc-8d46-cbdef8e7507d">
+<img width="498" alt="image" src="https://github.com/cartile/GTA-living/assets/113253660/0d836b66-468c-4126-b350-d99657b489f5">
 
 ## Listing Creation Form:
 <img width="497" alt="image" src="https://github.com/cartile/GTA-living/assets/113253660/32a8f8ca-90b0-48c4-a056-dc95d94aff54">
