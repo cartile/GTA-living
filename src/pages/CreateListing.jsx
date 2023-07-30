@@ -122,7 +122,7 @@ function CreateListing() {
           const fileName = `${auth.currentUser.uid}-${image.name}-${uuidv4()}`;
 
           const options = {
-            maxSizeMB: 1.5, // max output file size
+            maxSizeMB: 8, // max output file size
             maxWidthOrHeight: 1920, // max width/height
             useWebWorker: true,
           };
