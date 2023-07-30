@@ -1,7 +1,7 @@
 # GTALiving
 
 Welcome to GTALiving, a modern and user-friendly housing marketplace web application! 
-## Website is deployed on Vercel: https://gta-living.vercel.app/sign-up/
+## Currently deployed on Vercel: https://gta-living.vercel.app
 
 ## Features:
 - **Get Started**: Sign In and Sign Up powered safely and securely by Firebase Authentication and Google OAuth.
@@ -14,26 +14,20 @@ Welcome to GTALiving, a modern and user-friendly housing marketplace web applica
 ## Explore Page:
 <img width="497" alt="image" src="https://github.com/cartile/GTA-living/assets/113253660/8a1d8828-e2e8-465f-96f9-3a2b155b8109">
 
-## Filter Listings by Renting/Selling
-<img width="496" alt="image" src="https://github.com/cartile/GTA-living/assets/113253660/73a96546-f86e-4346-983e-8a14b4862393">
-<img width="497" alt="image" src="https://github.com/cartile/GTA-living/assets/113253660/b3c0d5b5-5115-40aa-874b-102af3ec1b38">
-
 ## Login / Registration:
 <img width="498" alt="image" src="https://github.com/cartile/GTA-living/assets/113253660/66e4814e-2430-4f2e-a304-d3e099d66938">
-<img width="499" alt="image" src="https://github.com/cartile/GTA-living/assets/113253660/e4ec3855-e9ec-45cb-9db7-2a50dbd789df">
 
 ## Offers Page:
 <img width="497" alt="image" src="https://github.com/cartile/GTA-living/assets/113253660/7e961c08-a5e3-40a7-8911-8f44f0fa8c87">
-<img width="498" alt="image" src="https://github.com/cartile/GTA-living/assets/113253660/0d836b66-468c-4126-b350-d99657b489f5">
 
 ## Example Listing:
 <img width="496" alt="image" src="https://github.com/cartile/GTA-living/assets/113253660/ac2a3296-bc5e-44f2-810e-464e26efed07">
 <img width="501" alt="image" src="https://github.com/cartile/GTA-living/assets/113253660/290a29fd-361c-4fa1-81d1-bfe12209a835">
 
-## Profile Page (Allows Listing Creation and Management):
+## Profile Page (With Listing Creation and Management):
 <img width="498" alt="image" src="https://github.com/cartile/GTA-living/assets/113253660/b1a4957c-ee2d-41cc-8d46-cbdef8e7507d">
 
-## Listing Creation Form:
+## Listing Creation:
 <img width="497" alt="image" src="https://github.com/cartile/GTA-living/assets/113253660/32a8f8ca-90b0-48c4-a056-dc95d94aff54">
 <img width="500" alt="image" src="https://github.com/cartile/GTA-living/assets/113253660/fee9b596-3d5b-475b-a249-fbeb345687d7">
 
