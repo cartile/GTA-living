@@ -12,6 +12,7 @@ import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { v4 as uuidv4 } from 'uuid'
 import Spinner from '../components/Spinner'
+import imageCompression from 'browser-image-compression'
 
 function CreateListing() {
   // eslint-disable-next-line
@@ -116,13 +117,26 @@ function CreateListing() {
 
     // Store image in firebase
     const storeImage = async (image) => {
-        return new Promise((resolve, reject) => {
+        return new Promise(async (resolve, reject) => {
           const storage = getStorage();
           const fileName = `${auth.currentUser.uid}-${image.name}-${uuidv4()}`;
-      
+
+          const options = {
+            maxSizeMB: 1.5, // max output file size
+            maxWidthOrHeight: 1920, // max width/height
+            useWebWorker: true,
+          };
+          
+          let compressedFile;
+          try {
+            compressedFile = await imageCompression(image, options);
+          } catch (error) {
+            console.error("Image compression error: ", error);
+            reject(error);
+          }
           const storageRef = ref(storage, 'images/' + fileName);
       
-          const uploadTask = uploadBytesResumable(storageRef, image);
+          const uploadTask = uploadBytesResumable(storageRef, compressedFile);
       
           uploadTask.on(
             'state_changed',
