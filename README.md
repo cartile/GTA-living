@@ -41,7 +41,7 @@ Welcome to GTALiving, a modern and user-friendly housing marketplace web applica
 To run GTALiving locally, follow these steps:
 
 1. Clone this repository.
-2. Ensure the following necessary dependencies are installed: `firebase, leaflet, react-helmet, react-leaflet, react-router-dom, react-toastify, swiper, uuid`.
+2. Ensure the necessary dependencies are installed: `npm install`.
 3. Start the development server with `npm start`.
 4. Open your web browser and visit `http://localhost:3000`.
 
