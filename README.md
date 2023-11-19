@@ -26,6 +26,3 @@ To run GTALiving locally, follow these steps:
 2. Ensure the necessary dependencies are installed: `npm install`.
 3. Start the development server with `npm start`.
 4. Open your web browser and visit `http://localhost:3000`.
-
-## Contributing
-Contributions are welcome! If you have any ideas, suggestions, or want to report a bug, please open an issue or submit a pull request.
